@@ -1,17 +1,21 @@
 const getWeatherForecast = async (cityName) => {
+    const loader = document.getElementById("loader");
     try {
+      loader.style.display = "flex";
       const response = await fetch(`https://weatherapi-com.p.rapidapi.com/forecast.json?q=${cityName}&days=3`, {
         method: "GET",
         headers: {
           "x-rapidapi-host": "weatherapi-com.p.rapidapi.com",
-          "x-rapidapi-key": process.env.API_KEY
+          "x-rapidapi-key": "1c0f79fa32mshc8aaac7dc56725fp186d0ejsn6e97502f76a8"
         },
       });
       const data = await response.json();
       console.log(data);
+      loader.style.display = "none";
       return data;
     } catch (error) {
       console.log(error);
+      loader.style.display = "none";
       return;
     }
 }
@@ -90,6 +94,7 @@ const searchWeather = async () => {
   if (!cityName) {
     return null;
   }
+
   const weatherData = await getWeatherForecast(cityName); // Argument ini akan digantikan dengan kata dari formulir search
 
   if (!weatherData.error) {

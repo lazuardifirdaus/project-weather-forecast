@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecast</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loading.css">
 </head>
 
 <body>
@@ -18,6 +19,9 @@
                 <input type="text" name="city-name" id="city-name" placeholder="Search weather forecast of your city">
                 <button onclick="searchWeather()">search</button>
             </div>
+        </div>
+        <div id="loader-container">
+            <div id="loader" style="display: none;"></div>
         </div>
         <div id="city-description"></div>
         <div id="current-weather"></div>

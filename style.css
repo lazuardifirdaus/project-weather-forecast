@@ -1,6 +1,7 @@
 body {
     margin: 0;
     background: #f1f8ff;
+    box-sizing: border-box;
     font-family: sans-serif;
 }
 
@@ -10,6 +11,9 @@ header {
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     padding: 30px;
     border-top: 2px solid #79a0c4;
     width: 80%;
@@ -38,6 +42,12 @@ header {
     color: #606060;
     cursor: pointer;
     border-radius: 2px;
+}
+
+#weather {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .weather-container {
@@ -69,5 +79,6 @@ header {
 }
 
 .weather-image {
-    width: 30%;
+    width: 100px;
+    align-self: center;
 }

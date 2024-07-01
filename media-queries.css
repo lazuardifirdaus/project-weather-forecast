@@ -1,0 +1,30 @@
+@media screen and (max-width: 880px) {
+    #weather {
+        row-gap: 30px;
+    }
+
+    #weather-forecast {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    #weather-forecast>.weather-container,
+    #current-weather>.weather-container {
+        display: flex;
+        width: 300px;
+        flex-direction: column;
+    }
+
+    #current-weather {
+        display: flex;
+        margin: 0;
+    }
+
+    #search-button {
+        width: 80px;
+    }
+
+    #city-name {
+        width: 230px;
+    }
+}
